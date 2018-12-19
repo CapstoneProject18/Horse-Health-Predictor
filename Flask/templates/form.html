@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container1 {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container1">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Horse Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="hname" name="horse name" placeholder="Name of the horse">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="rtemp">Rect Temp</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="rtemp" name="recttemp" placeholder="Rectal Temperature">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="pulse">Pulse</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="pulse" name="pulse" placeholder="Pulse Rate">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="rrate">Resp Rate</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="rrate" name="resprate" placeholder="Rate of Respiration">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="TempExt">Temp Ext</label>
+      </div>
+      <div class="col-75">
+        <select id="TempExt" name="TempExt">
+          <option value="cold">cold</option>
+          <option value="cool">cool</option>
+          <option value="normal">normal</option>
+          <option value="warm">warm</option>
+          <option value="<UNK>">Unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="perpulse">Peripheral puls</label>
+      </div>
+      <div class="col-75">
+        <select id="perpulse" name="perpulse">
+          <option value="absent">absent</option>
+          <option value="reduced">reduced</option>
+          <option value="normal">normal</option>
+          <option value="increased">increased</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="mucmem">Mucous Membrane</label>
+      </div>
+      <div class="col-75">
+        <select id="mucmem" name="mucmem">
+          <option value="pale_cyanotic">pale_cyanotic</option>
+          <option value="pale_pink">pale_pink</option>
+          <option value="dark_cyanotic">dark_cyanotic</option>
+          <option value="normal_pink">normal_pink</option>
+          <option value="bright_red">bright_red</option>
+          <option value="bright_pink">bright_pink</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="capref">Capillary Refill</label>
+      </div>
+      <div class="col-75">
+        <select id="capref" name="capref">
+          <option value="less_3_sec">less than 3s</option>
+          <option value="3">3s</option>
+          <option value="more_3_sec">more than 3s</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="pain">Pain</label>
+      </div>
+      <div class="col-75">
+        <select id="pain" name="pain">
+          <option value="extreme_pain">extreme pain</option>
+          <option value="mild_pain">mild pain</option>
+          <option value="depressed">depressed</option>
+          <option value="severe_pain">severe Pain</option>
+          <option value="alert">alert</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="abdist">Abdominal Distention</label>
+      </div>
+      <div class="col-75">
+        <select id="abdist" name="abdist">
+          <option value="none">none</option>
+          <option value="slight">slight</option>
+          <option value="moderate">moderate</option>
+          <option value="severe">severe</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="pstals">Peristalsis</label>
+      </div>
+      <div class="col-75">
+        <select id="pstals" name="pstals">
+          <option value="absent">absent</option>
+          <option value="hypomotile">hypomotile</option>
+          <option value="normal">normal</option>
+          <option value="hypermotile">hypermotile</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="nstube">Nasogastric Tube</label>
+      </div>
+      <div class="col-75">
+        <select id="nstube" name="nstube">
+          <option value="none">none</option>
+          <option value="slight">slight</option>
+          <option value="significant">significant</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div> 
+
+    <div class="row">
+      <div class="col-25">
+        <label for="nsreflux">Nasogastric Reflux</label>
+      </div>
+      <div class="col-75">
+        <select id="nsreflux" name="nsreflux">
+          <option value="none">none</option>
+          <option value="less_1_liter">less than 1 ltr</option>
+          <option value="more_1_liter">more than 1 ltr</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div> 
+
+    <div class="row">
+      <div class="col-25">
+        <label for="recexam">Rectal Exam Feces</label>
+      </div>
+      <div class="col-75">
+        <select id="recexam" name="recexam">
+          <option value="absent">absent</option>
+          <option value="decreased">decreased</option>
+          <option value="normal">normal</option>
+          <option value="increased">increased</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>     
+
+    <div class="row">
+      <div class="col-25">
+        <label for="abd">Abdomen state</label>
+      </div>
+      <div class="col-75">
+        <select id="abd" name="abd">
+          <option value="normal">absent</option>
+          <option value="distend_small">decreased</option>
+          <option value="distend_large">normal</option>
+          <option value="firm">increased</option>
+          <option value="other">other</option>
+          <option value="<UNK>">unknown</option>
+        </select>
+      </div>
+    </div>
+
+   <div class="row">
+      <div class="col-25">
+        <label for="surgery">Surgery</label>
+      </div>
+      <div class="col-75">
+        <select id="surgery" name="surgery">
+          <option value="0">no</option>
+          <option value="1">yes</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="young">Young</label>
+      </div>
+      <div class="col-75">
+        <select id="young" name="young">
+          <option value="0">no</option>
+          <option value="1">yes</option>
+        </select>
+      </div>
+    </div> 
+
+    <div class="row">
+      <div class="col-25">
+        <label for="slesion">Surgical Lesion</label>
+      </div>
+      <div class="col-75">
+        <select id="slesion" name="slesion">
+          <option value="0">no</option>
+          <option value="1">yes</option>
+        </select>
+      </div>
+    </div> 
+
+    <div class="row">
+      <div class="col-25">
+        <label for="pcv">PCV</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="pcv" name="pcv" placeholder="Total Packed Cell Volume">
+      </div>
+    </div>         
+
+     <div class="row">
+      <div class="col-25">
+        <label for="tprotein">Total Protein</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="tprotein" name="tprotein" placeholder="Total Cell Protein">
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 12px; padding-right: 40%; ">
+     <div class="col-25">   
+      </div>
+      <div class="col-75">
+        <input type="submit" value="Submit" style="width: 40%;">
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+

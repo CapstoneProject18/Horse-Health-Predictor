@@ -99,12 +99,27 @@ def logout():
 		return redirect('/')   
 	else:
 		flash('You have been logged out','Success!')
-		return redirect('/')  	
+		return redirect('/')
+
+@app.route('/predict')
+def predictor():
+	if session['logged_in']:
+		content = getContentPredict()
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+	else:
+		flash('Please login to continue','Oops!')
+		return redirect('/') 
+
 
 #Home Content returned Here 
 def getContentHome():
-	welx = open('templates/welx.txt','r').read()
+	welx = open('templates/welx.html','r').read()
 	return Markup(welx)
+
+#Predict Content returned Here 
+def getContentPredict():
+	pred = open('templates/form.html','r').read()
+	return Markup(pred)
 
 if __name__ == "__main__":
 	app.run(debug=True)
