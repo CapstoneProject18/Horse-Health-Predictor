@@ -1,0 +1,13 @@
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Welcome to Horse Health Predictor!</h1>
+          <p class="lead">The site map is as follows</p>
+          <ul class="list-unstyled">
+            <li>Home    -  Displays this page</li>
+            <li>Stats   -  Displays important inferences in data</li>
+            <li>Predict -  Displays the predictor tool</li>
+            <li>History -  Displays previous predictions</li>
+            <li>Logout  -  Logsout and returns to Login</li>
+          </ul>
+        </div>
+      </div>

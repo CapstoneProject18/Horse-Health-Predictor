@@ -1,6 +1,7 @@
 import json                       
 import datetime 
 from flask import Flask, render_template,flash,redirect,url_for,session,logging,request,jsonify
+from flask import Markup
 from pymongo import MongoClient                    
 from bson.objectid import ObjectId  
 from passlib.hash import sha256_crypt
@@ -15,7 +16,10 @@ mongo = MongoClient('localhost',27017)
 
 @app.route('/')
 def index():
-	return render_template('index.html')
+	if session['logged_in']:
+		return redirect('/home')
+	else:
+		return render_template('index.html')
 
 @app.route('/Signup', methods=['GET'])
 def Signup():     
@@ -26,13 +30,13 @@ def hsignup():
 	fname = request.form['fname']
 	lname = request.form['lname']
 	email = request.form['email']
-	username = request.form['nickname']
+	#username = request.form['nickname']
 	password = sha256_crypt.encrypt(str(request.form['pass']))
 	secretq = request.form['secretq']
 	secreta = request.form['secreta']
 
 	# Jsonify data
-	data = {'fname':fname, 'lname':lname, 'email':email,'username':username, 'password':password, 'sq':secretq, 'sa':secreta}
+	data = {'fname':fname, 'lname':lname, 'email':email, 'password':password, 'sq':secretq, 'sa':secreta}
 
 	# insert data
 	mongo['capstone']['user'].insert_one(data)
@@ -41,42 +45,66 @@ def hsignup():
 
 
 # User login
-"""@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['POST'])
 def login():
    if request.method == 'POST':
 	# Get Form Fields
-	username = request.form['username']
-	password_candidate = request.form['password']
+	email = request.form['email']
+	password_candidate = request.form['pass']
 
-	# Create cursor
-	cur = mysql.connection.cursor()
+ 	#Query for user name
+	result = mongo['capstone']['user'].find_one({'email':email})
+	
 
-	# Get user by username
-	result = cur.execute("SELECT * FROM users WHERE username = %s", [username])
+	if result is None:
 
-	if result > 0:
+		flash('Invalid UserName or Password','Oops!')
+		return redirect('/')   
+
+	else:
+
 	    # Get stored hash
-	    data = cur.fetchone()
-	    password = data['password']
+	    password = result['password']
 
 	    # Compare Passwords
 	    if sha256_crypt.verify(password_candidate, password):
 		# Passed
-		session['logged_in'] = True
-		session['username'] = username
+			session['logged_in'] = True
+			session['username'] = result['fname']
 
-		flash('You are now logged in', 'success')
-		return redirect(url_for('home.html'))
+			return redirect('/home')
+	    
 	    else:
-		error = 'Invalid login'
-		return render_template('login.html', error=error)
-	    # Close connection
-	    cur.close()
-	else:
-	    error = 'Username not found'
-	    return render_template('login.html', error=error)
+		
+			flash('Invalid UserName or Password','Oops!')
+			return redirect('/')   
 
-   return render_template('login.html')"""
+
+
+@app.route('/home', methods=['GET'])
+def home():
+	if session['logged_in']:
+		content = getContentHome()
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+	else:
+		flash('Please login to continue','Oops!')
+		return redirect('/')  		
+
+@app.route('/logout')
+def logout():
+	if session['logged_in']:
+		session['logged_in'] = False
+		session['username']  = ''
+		flash('You have been logged out','Success!')
+		return redirect('/')   
+	else:
+		flash('You have been logged out','Success!')
+		return redirect('/')  	
+
+#Home Content returned Here 
+def getContentHome():
+	welx = open('templates/welx.txt','r').read()
+	return Markup(welx)
 
 if __name__ == "__main__":
 	app.run(debug=True)
