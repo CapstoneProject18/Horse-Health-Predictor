@@ -43,13 +43,6 @@ foo@bar:~/Horse-Health-Predictor-master$ sudo pip install -r requirements.txt
 Start running the server 
 
 .
-​
-47
-.
-48
-​
-49
-.
 
 ```console
 foo@bar:~/Horse-Health-Predictor-master$ cd Flask/ 
