@@ -1,0 +1,60 @@
+<head>
+	<script src="static/plotly.js"></script>	
+</head>
+
+<body>
+
+	<div class="col-lg-12 text-center">
+	<h1 class="mt-5">Horses with lower pulse rates are more likely to survive</h1>
+	</div>
+
+	<div id="pulseBox" style="width:1000px;height:600px;">
+		<script >
+
+			var outcome = ['lived','died','euthanized'] 
+
+			Plotly.d3.csv('static/horse.csv', (err, rows) => {
+  				var data = outcome.map(y => {
+    			var d = rows.filter(r => r.outcome === y)
+
+    			return {
+     			type: 'box',
+      			name: y,
+      			y: d.map(r => r.pulse)
+    			
+    			}
+  			})
+
+			Plotly.newPlot('pulseBox', data);
+		})	
+
+		</script>
+	</div>
+
+	<div class="col-lg-12 text-center">
+	<h1 class="mt-5">Horses with no abdominal distention are more likely to survive</h1>
+	</div>
+
+	<div id="countPlot" style="width:1000px;height:600px;">
+		<script >
+
+			var abdominal_distention = ['none','slight','moderate','NA','severe'] 
+
+			Plotly.d3.csv('static/horse.csv', (err, rows) => {
+  				var data = abdominal_distention.map(y => {
+    			var d = rows.filter(r => r.abdominal_distention === y)
+
+    			return {
+     			type: 'histogram',
+      			name: y,
+    			x: d.map(r => r.outcome)
+    			}
+  			})
+
+			Plotly.newPlot('countPlot', data);
+		})
+
+		</script>
+	</div>
+
+</body>
