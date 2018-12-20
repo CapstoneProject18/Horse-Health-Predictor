@@ -1,4 +1,4 @@
-# Predicting-health-of-a-horse-using-a-available-data
+# Horse Health Predictor
 Predicting the survival rate of a horse using the given date set.
 .
 
