@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/res/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/res/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="static/res/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/res/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/res/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="static/res/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/css/util.css">
-	<link rel="stylesheet" type="text/css" href="static/css/main.css">
-<!--===============================================================================================-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+	.login-form {
+		width: 340px;
+    	margin: 50px auto;
+	}
+    .login-form form {
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+    .btn {        
+        font-size: 15px;
+        font-weight: bold;
+    }
+</style>
 </head>
 
 {% for category, msg in get_flashed_messages(with_categories=true) %}
 
-    <div class="alert {{ category }} alert-dismissible" role="alert" 
-    style="background-color: #ffffff;text-align: center; height: 40px; padding-top: 5px">
+    <div class="alert alert-primary" role="alert" style="background-color: #337ab7;color: #ffffff">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">×</span>
         </button>
@@ -39,75 +43,25 @@
     </div>	
 {% endfor %}
 
-<body >
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="{{ url_for('login') }}" method="post">
-					<span class="login100-form-title p-b-43">
-						Login to continue
-					</span>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
-						<span class="focus-input100"></span>
-						<span class="label-input100">Email</span>
-					</div>
-					
-					
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
-					</div>
 
-					<div class="flex-sb-m w-full p-t-3 p-b-32">
-						<a href="/Signup" class="txt2">
-						Signup here 
-						</a>
-						
-					</div>
-			
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-					
-					<div> 
-					    <a href="#" class="txt2">
-							Forgot Password? 
-						</a>
-					</div>
-					
-				</form>
-
-				<div class="login100-more" style="background-image: url('static/images/horse.jpg');">
-				</div>
-			</div>
-		</div>
-	</div>
-		
-	
-<!--===============================================================================================-->
-	<script src="static/res/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="static/res/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="static/res/bootstrap/js/popper.js"></script>
-	<script src="static/res/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="static/res/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="static/res/daterangepicker/moment.min.js"></script>
-	<script src="static/res/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="static/res/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="static/js/main.js"></script>
-
+<body style="background-color: #f8f9fa">
+<div class="login-form" style="padding-top: 10.5%;">
+    <form action="/login" method="post">
+        <h2 class="text-center">Login</h2>       
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="email" required="required" name="email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" required="required" name="pass">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </div>
+        <div class="text-center">
+            <a href="#" >Forgot Password?</a>
+        </div>        
+    </form>
+    <p class="text-center"><a href="/signup">Create an Account</a></p>
+</div>
 </body>
-</html>
+</html>                                		                            

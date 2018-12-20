@@ -70,13 +70,13 @@ input[type=submit]:hover {
 </head>
 <body>
 <div class="container1">
-  <form action="/action_page.php">
+  <form action="/hpredict" method="post">
     <div class="row">
       <div class="col-25">
         <label for="fname">Horse Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="hname" name="horse name" placeholder="Name of the horse" required>
+        <input type="text" id="hname" name="hname" placeholder="Name of the horse" required>
       </div>
     </div>
     <div class="row">
@@ -84,7 +84,7 @@ input[type=submit]:hover {
         <label for="rtemp">Rect Temp</label>
       </div>
       <div class="col-75">
-        <input type="text" id="rtemp" name="recttemp" placeholder="Rectal Temperature" required>
+        <input type="text" id="rtemp" name="rtemp" placeholder="Rectal Temperature" required>
       </div>
     </div>
     <div class="row">
@@ -261,10 +261,10 @@ input[type=submit]:hover {
       </div>
       <div class="col-75">
         <select id="abd" name="abd">
-          <option value="normal">absent</option>
-          <option value="distend_small">decreased</option>
-          <option value="distend_large">normal</option>
-          <option value="firm">increased</option>
+          <option value="normal">normal</option>
+          <option value="distend_small">distend_small</option>
+          <option value="distend_large">distend_large</option>
+          <option value="firm">firm</option>
           <option value="other">other</option>
           <option value="<UNK>">unknown</option>
         </select>
@@ -277,20 +277,20 @@ input[type=submit]:hover {
       </div>
       <div class="col-75">
         <select id="surgery" name="surgery">
-          <option value="0">no</option>
-          <option value="1">yes</option>
+          <option value="no">no</option>
+          <option value="yes">yes</option>
         </select>
       </div>
     </div>
 
     <div class="row">
       <div class="col-25">
-        <label for="young">Young</label>
+        <label for="age">Age</label>
       </div>
       <div class="col-75">
-        <select id="young" name="young">
-          <option value="0">no</option>
-          <option value="1">yes</option>
+        <select id="age" name="age">
+          <option value="young">young</option>
+          <option value="adult">adult</option>
         </select>
       </div>
     </div> 
@@ -301,8 +301,8 @@ input[type=submit]:hover {
       </div>
       <div class="col-75">
         <select id="slesion" name="slesion">
-          <option value="0">no</option>
-          <option value="1">yes</option>
+          <option value="no">no</option>
+          <option value="yes">yes</option>
         </select>
       </div>
     </div> 
@@ -337,4 +337,3 @@ input[type=submit]:hover {
 
 </body>
 </html>
-

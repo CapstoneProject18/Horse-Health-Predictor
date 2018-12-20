@@ -25,7 +25,12 @@
     			}
   			})
 
-			Plotly.newPlot('pulseBox', data);
+  			var layout1 = {
+ 				yaxis:{title:'pulse'},
+ 				xaxis:{title:'outcome'}
+  			}
+
+			Plotly.newPlot('pulseBox', data,layout1)
 		})	
 
 		</script>
@@ -51,7 +56,45 @@
     			}
   			})
 
-			Plotly.newPlot('countPlot', data);
+  			var layout2 = {
+ 				yaxis:{title:'count'},
+ 				xaxis:{title:'outcome'}
+  			}
+
+			Plotly.newPlot('countPlot', data,layout2)
+		})
+
+		</script>
+	</div>
+
+	<div class="col-lg-12 text-center">
+	<h1 class="mt-5">Horses with lower packed cell volumes and respiratory rates are more likely to survive</h1>
+	</div>
+
+	<div id="ScatterPlot" style="width:1000px;height:600px;">
+		<script >
+
+
+			Plotly.d3.csv('static/horse.csv', (err, rows) => {
+  				var data = outcome.map(y => {
+    			var d = rows.filter(r => r.outcome === y)
+
+    			return {
+     			type: 'scatter',
+     			mode: 'markers',
+     			marker:{ size:15},
+      			name: y,
+    			x: d.map(r => r.respiratory_rate),
+    			y: d.map(r => r.packed_cell_volume)
+    			}
+  			})
+
+  			var layout3 = {
+ 				yaxis:{title:'respiratory rate'},
+ 				xaxis:{title:'packed cell volume'}
+  			}
+
+			Plotly.newPlot('ScatterPlot', data,layout3);
 		})
 
 		</script>
