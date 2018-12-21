@@ -57,7 +57,7 @@ Dockerfile has been generated, an image has been uploaded to the repository to c
 .
 
 ```console
-foo@bar:~/Horse-Health-Predictor-master$ docker run -p 4000:5000 prashkurella/horsesurvival:part1
+foo@bar:~/Horse-Health-Predictor-master$ docker run -p 4000:5000 prashkurella/horsesurvival:final
 
 ```
 
