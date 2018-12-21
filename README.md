@@ -50,3 +50,14 @@ foo@bar:~/Horse-Health-Predictor-master$ cd Flask/
 foo@bar:~/Horse-Health-Predictor/Flask$ python fla.py
 
 ```
+.
+
+Dockerfile has been generated, an image has been uploaded to the repository to clone and run
+
+.
+
+```console
+foo@bar:~/Horse-Health-Predictor-master$ docker run -p 4000:5000 prashkurella/horsesurvival:part1
+
+```
+
