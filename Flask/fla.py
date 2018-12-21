@@ -30,10 +30,7 @@ mongo = MongoClient('localhost',27017)
 #Handle the requests
 @app.route('/')
 def index():
-	if session['logged_in']:
-		return redirect('/home')
-	else:
-		return render_template('index.html')
+	return render_template('index.html')
 
 @app.route('/signup', methods=['GET'])
 def signup():     
@@ -58,6 +55,45 @@ def hsignup():
 	else:
 		flash('You are already registered! Please login','Oops!')
 		return redirect('/')  
+
+@app.route('/fpassword')
+def fpassword():
+	return render_template('fp.html')
+
+@app.route('/findaccount',methods=['POST'])
+def findaccount():
+	if request.method == 'POST':
+		email = request.form['email']
+		result = mongo['capstone']['user'].find_one({'email':email})
+		session['em'] = result['email']
+		if result is None:
+			flash('Invalid UserName ')
+			return redirect('/') 
+		else:
+			return render_template('answer.html',secretq=result['sq'],)
+
+@app.route('/answer',methods=['POST'])
+def answer():
+	secreta_candidate = request.form['secreta']
+	email=session['em']
+	result = mongo['capstone']['user'].find_one({'email':email})
+	secreta = result['sa']
+	if secreta_candidate == secreta:
+		return render_template('cpassword.html')
+	else:
+		session['em']=''
+		flash('Wrong answer, please retry')
+		return redirect('/answer')
+
+@app.route('/cpassword',methods=['POST'])
+def cpassword():
+	email=session['em']
+	result = mongo['capstone']['user'].find_one({'email':email})
+	result['password'] = sha256_crypt.encrypt(str(request.form['password']))
+	mongo['capstone']['user'].update_one({'email':email},{'$set':result},upsert=False)
+	session['em']=''
+	flash('Your Password has been changed successfully','Success!')
+	return redirect('/')
 
 
 # User login
@@ -238,5 +274,5 @@ def getContentHistory():
 	return Markup(hist)
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(debug=False,host='0.0.0.0')
 
