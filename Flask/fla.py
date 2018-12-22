@@ -65,11 +65,11 @@ def findaccount():
 	if request.method == 'POST':
 		email = request.form['email']
 		result = mongo['capstone']['user'].find_one({'email':email})
-		session['em'] = result['email']
 		if result is None:
 			flash('Invalid UserName ')
 			return redirect('/') 
 		else:
+			session['em'] = result['email']
 			return render_template('answer.html',secretq=result['sq'],)
 
 @app.route('/answer',methods=['POST'])
@@ -83,7 +83,7 @@ def answer():
 	else:
 		session['em']=''
 		flash('Wrong answer, please retry')
-		return redirect('/answer')
+		return redirect('/fpassword',)
 
 @app.route('/cpassword',methods=['POST'])
 def cpassword():
