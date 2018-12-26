@@ -1,0 +1,567 @@
+************* Module Report.txt
+F:  1, 0: No module named Report.txt (fatal)
+************* Module fla
+C:  3, 0: Trailing whitespace (trailing-whitespace)
+C:  5, 0: Trailing whitespace (trailing-whitespace)
+C: 15, 0: Trailing whitespace (trailing-whitespace)
+C: 16, 0: Trailing whitespace (trailing-whitespace)
+C: 25, 0: Trailing whitespace (trailing-whitespace)
+C: 25, 0: Exactly one space required before assignment
+app= Flask(__name__)                                
+   ^ (bad-whitespace)
+C: 28, 0: Trailing whitespace (trailing-whitespace)
+C: 28, 0: Exactly one space required after comma
+mongo = MongoClient('localhost',27017)   
+                               ^ (bad-whitespace)
+C: 29, 0: Trailing whitespace (trailing-whitespace)
+W: 33, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 36, 0: Trailing whitespace (trailing-whitespace)
+W: 37, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 41, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 42, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 43, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 44, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 45, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 46, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 48, 0: Line too long (102/100) (line-too-long)
+W: 48, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 50, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 51, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 52, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 53, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 53, 0: Exactly one space required after comma
+		flash('You are now registered and can log in','Success')
+                                               ^ (bad-whitespace)
+W: 54, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 55, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 56, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 56, 0: Exactly one space required after comma
+		flash('You are already registered! Please login','Oops!')
+                                                  ^ (bad-whitespace)
+C: 57, 0: Trailing whitespace (trailing-whitespace)
+W: 57, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 61, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 63, 0: Exactly one space required after comma
+@app.route('/findaccount',methods=['POST'])
+                         ^ (bad-whitespace)
+W: 65, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 66, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 67, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 68, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 69, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 70, 0: Trailing whitespace (trailing-whitespace)
+W: 70, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 71, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 72, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 73, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 73, 0: Exactly one space required after comma
+			return render_template('answer.html',secretq=result['sq'],)
+                                       ^ (bad-whitespace)
+C: 75, 0: Exactly one space required after comma
+@app.route('/answer',methods=['POST'])
+                    ^ (bad-whitespace)
+W: 77, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 78, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 78, 0: Exactly one space required around assignment
+	email=session['em']
+      ^ (bad-whitespace)
+W: 79, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 80, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 81, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 82, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 83, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 84, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 84, 0: Exactly one space required around assignment
+		session['em']=''
+               ^ (bad-whitespace)
+W: 85, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 86, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 88, 0: Exactly one space required after comma
+@app.route('/cpassword',methods=['POST'])
+                       ^ (bad-whitespace)
+W: 90, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 90, 0: Exactly one space required around assignment
+	email=session['em']
+      ^ (bad-whitespace)
+W: 91, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 92, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 93, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 93, 0: Exactly one space required after comma
+	mongo['capstone']['user'].update_one({'email':email},{'$set':result},upsert=False)
+                                                     ^ (bad-whitespace)
+C: 93, 0: Exactly one space required after comma
+	mongo['capstone']['user'].update_one({'email':email},{'$set':result},upsert=False)
+                                                                     ^ (bad-whitespace)
+W: 94, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 94, 0: Exactly one space required around assignment
+	session['em']=''
+              ^ (bad-whitespace)
+W: 95, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 95, 0: Exactly one space required after comma
+	flash('Your Password has been changed successfully','Success!')
+                                                    ^ (bad-whitespace)
+W: 96, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:102, 0: Bad indentation. Found 3 spaces, expected 4 (bad-indentation)
+W:104, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:105, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:107, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:108, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:109, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:109, 0: Exactly one space required after comma
+		flash('Invalid UserName or Password','Oops!')
+                                      ^ (bad-whitespace)
+C:110, 0: Trailing whitespace (trailing-whitespace)
+W:110, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:111, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:113, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:115, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:117, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:118, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:119, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:120, 0: Trailing whitespace (trailing-whitespace)
+W:120, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:121, 0: Trailing whitespace (trailing-whitespace)
+W:121, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:122, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:122, 0: Exactly one space required after comma
+			flash('Invalid UserName or Password','Oops!')
+                                       ^ (bad-whitespace)
+C:123, 0: Trailing whitespace (trailing-whitespace)
+W:123, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:129, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:130, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:131, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:131, 0: Exactly one space required after comma
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                    ^ (bad-whitespace)
+C:131, 0: Exactly one space required after comma
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                                                         ^ (bad-whitespace)
+W:132, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:133, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:133, 0: Exactly one space required after comma
+		flash('Please login to continue','Oops!')
+                                  ^ (bad-whitespace)
+C:134, 0: Trailing whitespace (trailing-whitespace)
+W:134, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:138, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:139, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:140, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:140, 0: Exactly one space required before assignment
+		session['username']  = ''
+                       ^ (bad-whitespace)
+W:141, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:142, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:142, 0: Exactly one space required after comma
+	flash('You have been logged out','Success!')
+                                 ^ (bad-whitespace)
+W:143, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:147, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:148, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:149, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:149, 0: Exactly one space required after comma
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                    ^ (bad-whitespace)
+C:149, 0: Exactly one space required after comma
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                                                         ^ (bad-whitespace)
+W:150, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:151, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:151, 0: Exactly one space required after comma
+		flash('Please login to continue','Oops!')
+                                  ^ (bad-whitespace)
+C:152, 0: Trailing whitespace (trailing-whitespace)
+W:152, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:156, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:157, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:158, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:158, 0: Exactly one space required after comma
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                    ^ (bad-whitespace)
+C:158, 0: Exactly one space required after comma
+		return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                                                         ^ (bad-whitespace)
+W:159, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:160, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:160, 0: Exactly one space required after comma
+		flash('Please login to continue','Oops!')
+                                  ^ (bad-whitespace)
+W:161, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:163, 0: Exactly one space required after comma
+@app.route('/hpredict',methods=['POST'])
+                      ^ (bad-whitespace)
+W:165, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:166, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:166, 0: Exactly one space required after comma
+	df.drop(df.columns[0], axis=1,inplace=True)
+                              ^ (bad-whitespace)
+W:168, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:169, 0: Wrong continued indentation (add 4 spaces).
+				'peripheral_pulse':request.form['perpulse'],
+    ^   | (bad-continuation)
+C:170, 0: Wrong continued indentation (add 4 spaces).
+				'mucous_membrane':request.form['mucmem'],
+    ^   | (bad-continuation)
+C:171, 0: Wrong continued indentation (add 4 spaces).
+				'capillary_refill_time':request.form['capref'],
+    ^   | (bad-continuation)
+C:172, 0: Wrong continued indentation (add 4 spaces).
+				'pain':request.form['pain'],
+    ^   | (bad-continuation)
+C:173, 0: Wrong continued indentation (add 4 spaces).
+				'peristalsis':request.form['pstals'],
+    ^   | (bad-continuation)
+C:174, 0: Wrong continued indentation (add 4 spaces).
+				'abdominal_distention':request.form['abdist'],
+    ^   | (bad-continuation)
+C:175, 0: Wrong continued indentation (add 4 spaces).
+				'nasogastric_tube':request.form['nstube'],
+    ^   | (bad-continuation)
+C:176, 0: Wrong continued indentation (add 4 spaces).
+				'nasogastric_reflux':request.form['nsreflux'],
+    ^   | (bad-continuation)
+C:177, 0: Wrong continued indentation (add 4 spaces).
+				'rectal_exam_feces':request.form['recexam'],
+    ^   | (bad-continuation)
+C:178, 0: Wrong continued indentation (add 4 spaces).
+				'abdomen':request.form['abd'],
+    ^   | (bad-continuation)
+C:179, 0: Wrong continued indentation (add 4 spaces).
+				'surgical_lesion':request.form['slesion'],
+    ^   | (bad-continuation)
+C:180, 0: Wrong continued indentation (add 4 spaces).
+				'age':request.form['age'],
+    ^   | (bad-continuation)
+C:181, 0: Wrong continued indentation (add 4 spaces).
+				'surgery':request.form['surgery'],
+    ^   | (bad-continuation)
+C:182, 0: Wrong continued indentation (add 4 spaces).
+				'rectal_temp':request.form['rtemp'],
+    ^   | (bad-continuation)
+C:183, 0: Wrong continued indentation (add 4 spaces).
+				'pulse':request.form['pulse'],
+    ^   | (bad-continuation)
+C:184, 0: Wrong continued indentation (add 4 spaces).
+				'respiratory_rate':request.form['resprate'],
+    ^   | (bad-continuation)
+C:185, 0: Wrong continued indentation (add 4 spaces).
+				'packed_cell_volume':request.form['pcv'],
+    ^   | (bad-continuation)
+C:186, 0: Wrong continued indentation (add 4 spaces).
+				'total_protein':request.form['tprotein'],
+    ^   | (bad-continuation)
+C:187, 0: Wrong continued indentation (add 4 spaces).
+				'outcome':'lived'
+    ^   | (bad-continuation)
+C:188, 0: Wrong continued indentation (add 3 spaces).
+				}
+    ^  | (bad-continuation)
+W:190, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:190, 0: Exactly one space required after comma
+	fin = pd.DataFrame(fin,index=[299])
+                       ^ (bad-whitespace)
+W:191, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:191, 0: Exactly one space required around assignment
+	df=df.append(fin)
+   ^ (bad-whitespace)
+W:192, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:193, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:194, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:194, 0: Exactly one space required after comma
+	df.drop(['temp_of_extremities','peripheral_pulse',
+                               ^ (bad-whitespace)
+C:195, 0: Wrong continued indentation (add 6 spaces).
+			 'mucous_membrane', 'capillary_refill_time',
+    ^     | (bad-continuation)
+C:196, 0: Wrong continued indentation (add 6 spaces).
+			 'pain','peristalsis', 'abdominal_distention',
+    ^     | (bad-continuation)
+C:196, 0: Exactly one space required after comma
+			 'pain','peristalsis', 'abdominal_distention',
+          ^ (bad-whitespace)
+C:197, 0: Wrong continued indentation (add 6 spaces).
+			 'nasogastric_tube','nasogastric_reflux',
+    ^     | (bad-continuation)
+C:197, 0: Exactly one space required after comma
+			 'nasogastric_tube','nasogastric_reflux',
+                      ^ (bad-whitespace)
+C:198, 0: Wrong continued indentation (add 6 spaces).
+			 'rectal_exam_feces', 'abdomen','outcome',
+    ^     | (bad-continuation)
+C:198, 0: Exactly one space required after comma
+			 'rectal_exam_feces', 'abdomen','outcome',
+                                  ^ (bad-whitespace)
+C:199, 0: Wrong continued indentation (add 6 spaces).
+			 'surgery','surgical_lesion','age'],axis=1,inplace=True)
+    ^     | (bad-continuation)
+C:199, 0: Exactly one space required after comma
+			 'surgery','surgical_lesion','age'],axis=1,inplace=True)
+             ^ (bad-whitespace)
+C:199, 0: Exactly one space required after comma
+			 'surgery','surgical_lesion','age'],axis=1,inplace=True)
+                               ^ (bad-whitespace)
+C:199, 0: Exactly one space required after comma
+			 'surgery','surgical_lesion','age'],axis=1,inplace=True)
+                                      ^ (bad-whitespace)
+C:199, 0: Exactly one space required after comma
+			 'surgery','surgical_lesion','age'],axis=1,inplace=True)
+                                             ^ (bad-whitespace)
+W:200, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:201, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:202, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:202, 0: Exactly one space required after comma
+	cat_df = pd.get_dummies(cat_df,columns=['temp_of_extremities',
+                               ^ (bad-whitespace)
+C:203, 0: Wrong continued indentation (add 38 spaces).
+			'peripheral_pulse', 'mucous_membrane',
+   ^                                     | (bad-continuation)
+C:204, 0: Wrong continued indentation (add 38 spaces).
+			'capillary_refill_time', 'pain','peristalsis',
+   ^                                     | (bad-continuation)
+C:204, 0: Exactly one space required after comma
+			'capillary_refill_time', 'pain','peristalsis',
+                                  ^ (bad-whitespace)
+C:205, 0: Wrong continued indentation (add 38 spaces).
+			'abdominal_distention', 'nasogastric_tube',
+   ^                                     | (bad-continuation)
+C:206, 0: Wrong continued indentation (add 32 spaces).
+       		'nasogastric_reflux', 'rectal_exam_feces',
+         ^                               | (bad-continuation)
+C:207, 0: Wrong continued indentation (add 32 spaces).
+       		'abdomen','surgery','surgical_lesion','age'])
+         ^                               | (bad-continuation)
+C:207, 0: Exactly one space required after comma
+       		'abdomen','surgery','surgical_lesion','age'])
+                  ^ (bad-whitespace)
+C:207, 0: Exactly one space required after comma
+       		'abdomen','surgery','surgical_lesion','age'])
+                            ^ (bad-whitespace)
+C:207, 0: Exactly one space required after comma
+       		'abdomen','surgery','surgical_lesion','age'])
+                                              ^ (bad-whitespace)
+W:208, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:209, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:209, 0: Exactly one space required after comma
+	le.fit(["died","euthanized","lived"])
+               ^ (bad-whitespace)
+C:209, 0: Exactly one space required after comma
+	le.fit(["died","euthanized","lived"])
+                            ^ (bad-whitespace)
+W:210, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:211, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:211, 0: Exactly one space required after comma
+	findata = pd.DataFrame(data=pd.concat([cat_df,df],axis=1))
+                                              ^ (bad-whitespace)
+C:211, 0: Exactly one space required after comma
+	findata = pd.DataFrame(data=pd.concat([cat_df,df],axis=1))
+                                                  ^ (bad-whitespace)
+W:213, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:213, 0: Exactly one space required around comparison
+	x = findata[findata.index!=299].drop('outcome',axis=1).values
+                          ^^ (bad-whitespace)
+C:213, 0: Exactly one space required after comma
+	x = findata[findata.index!=299].drop('outcome',axis=1).values
+                                               ^ (bad-whitespace)
+W:214, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:214, 0: Exactly one space required around comparison
+	y = findata[findata.index!=299]['outcome'].values
+                          ^^ (bad-whitespace)
+W:215, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:216, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:216, 0: Exactly one space required after comma
+	model.fit(x,y)
+            ^ (bad-whitespace)
+W:217, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:217, 0: Exactly one space required around comparison
+	pred = model.predict(findata[findata.index==299].drop('outcome',axis=1))
+                                           ^^ (bad-whitespace)
+C:217, 0: Exactly one space required after comma
+	pred = model.predict(findata[findata.index==299].drop('outcome',axis=1))
+                                                                ^ (bad-whitespace)
+W:219, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:219, 0: Exactly one space required around comparison
+	if pred==[1]:
+        ^^ (bad-whitespace)
+W:220, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:220, 0: Exactly one space required around assignment
+		pred="Likely to be euthanized :("
+      ^ (bad-whitespace)
+W:221, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:221, 0: Exactly one space required around comparison
+	elif pred==[2]:
+          ^^ (bad-whitespace)
+W:222, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:222, 0: Exactly one space required around assignment
+		pred="Likely to die :("
+      ^ (bad-whitespace)
+W:223, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:224, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:224, 0: Exactly one space required around assignment
+		pred="Likely to live :)"
+      ^ (bad-whitespace)
+C:225, 0: Trailing whitespace (trailing-whitespace)
+W:226, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:227, 0: Wrong continued indentation (add 41 spaces).
+	'pred':pred,'time':datetime.datetime.now(), 'Hname':request.form['hname']})
+ ^                                        | (bad-continuation)
+C:227, 0: Exactly one space required after comma
+	'pred':pred,'time':datetime.datetime.now(), 'Hname':request.form['hname']})
+            ^ (bad-whitespace)
+W:228, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:232, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:233, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:234, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:234, 0: Exactly one space required after comma
+			return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                     ^ (bad-whitespace)
+C:234, 0: Exactly one space required after comma
+			return render_template('home.html',user_name='Hi! '+session['username'],content=content)
+                                                                          ^ (bad-whitespace)
+W:235, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:236, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:236, 0: Exactly one space required after comma
+			flash('Please login to continue','Oops!')
+                                   ^ (bad-whitespace)
+W:237, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:239, 0: Trailing whitespace (trailing-whitespace)
+W:241, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:241, 0: Exactly one space required after comma
+	welx = open('templates/welx.html','r').read()
+                                  ^ (bad-whitespace)
+W:242, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:244, 0: Trailing whitespace (trailing-whitespace)
+W:246, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:246, 0: Exactly one space required after comma
+	pred = open('templates/form.html','r').read()
+                                  ^ (bad-whitespace)
+W:247, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:251, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:251, 0: Exactly one space required after comma
+	stats = open('templates/graph.html','r').read()
+                                    ^ (bad-whitespace)
+W:252, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:255, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:255, 0: Exactly one space required around assignment
+	hist=''
+     ^ (bad-whitespace)
+W:256, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:257, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:258, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:258, 0: Exactly one space required before assignment
+		hist+= '<div class="row">'
+      ^^ (bad-whitespace)
+W:259, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:259, 0: Exactly one space required before assignment
+		hist+= '<div class="col-lg-12 text-center">'
+      ^^ (bad-whitespace)
+W:260, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:260, 0: Exactly one space required before assignment
+		hist+= '<h1 class="mt-5">'
+      ^^ (bad-whitespace)
+W:261, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:261, 0: Exactly one space required before assignment
+		hist+= document['Hname']
+      ^^ (bad-whitespace)
+W:262, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:262, 0: Exactly one space required before assignment
+		hist+= '</h1>'
+      ^^ (bad-whitespace)
+W:263, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:263, 0: Exactly one space required before assignment
+		hist+= '<p class="lead">'
+      ^^ (bad-whitespace)
+W:264, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:264, 0: Exactly one space required before assignment
+		hist+= document['pred']
+      ^^ (bad-whitespace)
+W:265, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:265, 0: Exactly one space required before assignment
+		hist+= '</p>'
+      ^^ (bad-whitespace)
+W:266, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:266, 0: Exactly one space required before assignment
+		hist+= '<ul class="list-unstyled">'
+      ^^ (bad-whitespace)
+W:267, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:267, 0: Exactly one space required before assignment
+		hist+= '<li>'
+      ^^ (bad-whitespace)
+W:268, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:268, 0: Exactly one space required before assignment
+		hist+= document['time'].strftime("%Y-%m-%d %H:%M:%S")
+      ^^ (bad-whitespace)
+W:269, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:269, 0: Exactly one space required before assignment
+		hist+= '</li>'
+      ^^ (bad-whitespace)
+W:270, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:270, 0: Exactly one space required before assignment
+		hist+= '</ul>'
+      ^^ (bad-whitespace)
+W:271, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:271, 0: Exactly one space required before assignment
+		hist+= '</div>'
+      ^^ (bad-whitespace)
+W:272, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:272, 0: Exactly one space required before assignment
+		hist+= '</div>'
+      ^^ (bad-whitespace)
+C:273, 0: Trailing whitespace (trailing-whitespace)
+W:274, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:277, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:277, 0: Exactly one space required after comma
+	app.run(debug=False,host='0.0.0.0')
+                    ^ (bad-whitespace)
+C:278, 0: Trailing newlines (trailing-newlines)
+C:  1, 0: Missing module docstring (missing-docstring)
+C: 25, 0: Constant name "app" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 28, 0: Constant name "mongo" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 32, 0: Missing function docstring (missing-docstring)
+C: 36, 0: Missing function docstring (missing-docstring)
+C: 40, 0: Missing function docstring (missing-docstring)
+R: 51, 1: Unnecessary "else" after "return" (no-else-return)
+C: 60, 0: Missing function docstring (missing-docstring)
+C: 64, 0: Missing function docstring (missing-docstring)
+R: 68, 2: Unnecessary "else" after "return" (no-else-return)
+R: 64, 0: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+C: 76, 0: Missing function docstring (missing-docstring)
+R: 81, 1: Unnecessary "else" after "return" (no-else-return)
+C: 89, 0: Missing function docstring (missing-docstring)
+C:101, 0: Missing function docstring (missing-docstring)
+R:108, 1: Unnecessary "else" after "return" (no-else-return)
+R:115, 5: Unnecessary "else" after "return" (no-else-return)
+R:101, 0: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+C:128, 0: Missing function docstring (missing-docstring)
+R:129, 1: Unnecessary "else" after "return" (no-else-return)
+C:137, 0: Missing function docstring (missing-docstring)
+C:146, 0: Missing function docstring (missing-docstring)
+R:147, 1: Unnecessary "else" after "return" (no-else-return)
+C:155, 0: Missing function docstring (missing-docstring)
+R:156, 1: Unnecessary "else" after "return" (no-else-return)
+C:164, 0: Missing function docstring (missing-docstring)
+C:165, 1: Variable name "df" doesn't conform to snake_case naming style (invalid-name)
+C:191, 1: Variable name "df" doesn't conform to snake_case naming style (invalid-name)
+C:201, 1: Variable name "df" doesn't conform to snake_case naming style (invalid-name)
+C:208, 1: Variable name "le" doesn't conform to snake_case naming style (invalid-name)
+C:213, 1: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+C:214, 1: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+C:231, 0: Missing function docstring (missing-docstring)
+R:232, 2: Unnecessary "else" after "return" (no-else-return)
+C:240, 0: Function name "getContentHome" doesn't conform to snake_case naming style (invalid-name)
+C:240, 0: Missing function docstring (missing-docstring)
+C:245, 0: Function name "getContentPredict" doesn't conform to snake_case naming style (invalid-name)
+C:245, 0: Missing function docstring (missing-docstring)
+W:251, 1: Redefining name 'stats' from outer scope (line 155) (redefined-outer-name)
+C:250, 0: Function name "getContentStats" doesn't conform to snake_case naming style (invalid-name)
+C:250, 0: Missing function docstring (missing-docstring)
+C:254, 0: Function name "getContentHistory" doesn't conform to snake_case naming style (invalid-name)
+C:254, 0: Missing function docstring (missing-docstring)
+W:  4, 0: Unused numpy imported as np (unused-import)
+W: 10, 0: Unused url_for imported from flask (unused-import)
+W: 12, 0: Unused logging imported from flask (unused-import)
+W: 16, 0: Unused ObjectId imported from bson.objectid (unused-import)
+W: 21, 0: Unused joblib imported from sklearn.externals (unused-import)
+
+--------------------------------------------------------------------
+Your code has been rated at -8.44/10 (previous run: -8.44/10, +0.00)
+
