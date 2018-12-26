@@ -563,5 +563,5 @@ W: 16, 0: Unused ObjectId imported from bson.objectid (unused-import)
 W: 21, 0: Unused joblib imported from sklearn.externals (unused-import)
 
 --------------------------------------------------------------------
-Your code has been rated at -8.44/10 (previous run: -8.44/10, +0.00)
+Your code has been rated at 8.44/10 (previous run: 8.44/10, +0.00)
 
