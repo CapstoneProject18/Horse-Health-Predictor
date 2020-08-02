@@ -1,8 +1,5 @@
 # Horse Health Predictor
-Predicting the survival rate of a horse using the given date set.
-.
-
-The project is Flask based Web App that predicts if a horse will survive hospitalization,
+* A dockerized flask app demonstratiing experience in deploying machine learning models* 
 
 .
 
