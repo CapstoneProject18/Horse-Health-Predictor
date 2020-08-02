@@ -1,5 +1,5 @@
 # Horse Health Predictor
-* A dockerized flask app demonstratiing experience in deploying machine learning models* 
+*A dockerized flask app demonstrating experience in deploying machine learning models* 
 
 .
 
